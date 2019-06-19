@@ -1,11 +1,11 @@
 {
   "development": {
-    "username": "root",
+    "username": "sbcz5a6kz9ton85a",
 
-    "password": "Altima1987",
-    "database": "friendlyneighbor",
+    "password": "ttc5k52s6moonm95",
+    "database": "v0ycq9lwm5suacu8",
 
-    "host": "localhost",
+    "host": "thh2lzgakldp794r.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
