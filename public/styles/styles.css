@@ -6,17 +6,73 @@
   background-color: black;
   border-top-color: rgb(43, 255, 0);
   width: 375px;
-  border-radius: 80px;
+  border-radius: 25px 50px 5px 25px;
+  margin-left: 5px;
 }
 
 h3 {
   margin-left: 6px;
   color: rgb(0, 255, 123);
   text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  padding-right: 150px;
+  font-family: Cambria, Cochin, Georgia, Times;
 }
 
 .jumbotron {
-  background-color: rgb(35, 20, 150);
+  background-color: rgba(53, 49, 79, 0.748);
+}
+
+#login-btn {
+  width: 80px;
+  background-color: rgb(20, 179, 20);
+  color: white;
+  
+}
+
+.display-4 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(243, 213, 213);
+  text-align: center;
+
+}
+
+.lead {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(243,213,213);
+}
+
+p {
+  color: rgb(243,213,213);
+}
+body {
+  background-image: url("http://sfwallpaper.com/images/hd-abstract-wallpaper-widescreen-17.jpg");
+}
+
+
+.modal-body{
+  background-color: rgb(98, 89, 89)
+}
+
+.modal-header {
+  background-color: darkgrey;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align:center;
+
+}
+
+.modal-title {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.modal-footer {
+  background-color: darkgrey;
+
+}
+.close {
+  color:red;  
+}
+
+.card-body {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy5Pk3n_-8uYY39VsMXiSX3ZDNK-W1nTqQ-EeJH2YmuLOwUzhvFA");
+  background-repeat: repeat;
 }
