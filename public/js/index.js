@@ -148,3 +148,72 @@ var handleDeleteBtnClick = function() {
 $submitNewUser.on("click", handleFormSubmit )
 $submitBtn.on("click", handleFormSubmit);
 $deleteItemList.on("click", ".delete", handleDeleteBtnClick);
+
+//geolocation
+// 3. weather api key and call
+var weatherApiKey = "6fc19ba254fc6bfa17075467ace4ee41";
+
+ 
+navigator.geolocation.getCurrentPosition(function(position) {
+
+    if (navigator.geolocation.getCurrentPosition){
+
+    var weatherURL = "https://api.openweathermap.org/data/2.5/weather?&units=imperial&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&appid="  + weatherApiKey;
+    var weatherWidgetCoords = position.coords.latitude + "," + position.coords.longitude;
+   console.log(weatherWidgetCoords);
+    
+  
+    
+    
+    //4. Ajax call function
+    $.ajax({
+        url: weatherURL,
+        method: "GET",
+    }).then(function(weather){
+        console.log(weather);
+        
+        if (weather.weather[0].main == "Thunderstorm"){
+            $("#weather").html("The current temperature today is: " + Math.round(weather.main.temp) + "˚F" + " with chances of Thunderstorms "); 
+            var weatherImage = $("<img id='widgetImage' src='http://openweathermap.org/img/w/11d.png'>");
+            $("#weather").append(weatherImage);
+        }
+        else if (weather.weather[0].main == "Drizzle"){
+            $("#weather").html("The current temperature today is: " + Math.round(weather.main.temp) + "˚F" + " with chances of Drizzle ");                 
+            var weatherImage = $("<img id='widgetImage' src='http://openweathermap.org/img/w/09d.png'>");
+            $("#weather").append(weatherImage);
+        }
+        else if (weather.weather[0].main == "Rain"){
+            $("#weather").html("The current temperature today is: " + Math.round(weather.main.temp) + "˚F" + " with chances of Rain "); 
+            var weatherImage = $("<img id='widgetImage' src='http://openweathermap.org/img/w/10d.png'>");
+            $("#weather").append(weatherImage);
+        }
+        else if (weather.weather[0].main == "Snow"){
+            $("#weather").html("The current temperature today is: " + Math.round(weather.main.temp) + "˚F" + " with chances of Snowing "); 
+            var weatherImage = $("<img id='widgetImage' src='http://openweathermap.org/img/w/13d.png'>");
+            $("#weather").append(weatherImage);
+        }
+        else if (weather.weather[0].main == "Clouds"){
+            $("#weather").html("The current temperature today is: " + Math.round(weather.main.temp) + "˚F" + " with chances of Clouds "); 
+            var weatherImage = $("<img id='widgetImage' src='http://openweathermap.org/img/w/02d.png'>");
+            $("#weather").append(weatherImage);
+        }
+        else if (weather.weather[0].main == "Clear"){
+            $("#weather").html("The current temperature today is: " + Math.round(weather.main.temp) + "˚F" + " with a Clear Sky "); 
+            var weatherImage = $("<img id='widgetImage' src='http://openweathermap.org/img/w/01d.png'>");
+            $("#weather").append(weatherImage);
+        }
+        else if (weather.weather[0].id <= "700" && weather.weather[0].id >= "799"){
+                $("#weather").html("The current temperature today is: " + Math.round(weather.main.temp) + "˚F" + " with some unusual Conditions ");
+                var weatherImage = $("<img id='widgetImage' src='http://openweathermap.org/img/w/50d.png'>");
+                $("#weather").append(weatherImage); 
+            }
+        else {
+            $("#weather").html("This is a Weird Condition at least the temperature is nice: " + Math.round(weather.main.temp)); 
+
+         }
+        });	
+    }
+    else{
+        console.log("could not obtain Geolocation, require user input")
+    };
+});

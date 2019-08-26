@@ -23,6 +23,14 @@ app.engine(
 
 app.set("view engine", "handlebars");
 
+// Handlebars-react
+var HandlebarsReact = require("handlebars-react");
+ 
+new HandlebarsReact()
+.compile("<h1>{{title}}</h1>")
+.then(result => console.log("done!"));
+
+
 // Routes
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);

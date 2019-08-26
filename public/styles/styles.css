@@ -1,3 +1,84 @@
+.dropdown-menu .sub-menu {
+  left: 100%;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  margin-top: -1px;
+}
+
+li {
+  list-style-type: none;
+  padding-right:20px;
+}
+
+.fa-globe{
+  font-size: 45px;
+  padding-right:8px;
+  color:white;
+
+}
+#weather{
+  background-image: url("https://shiftyjelly.files.wordpress.com/2013/11/w.jpg?w=750&h=425");
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin-top:-65px;
+  margin-left:-2px;
+  /* clip-path: polygon(25% 0%, 100% 0, 79% 100%, 0% 100%); */
+  /* clip-path: polygon(0 0, 100% 0%, 68% 64%, 0% 100%); */
+  clip-path: polygon(0 0, 100% 0%, 68% 64%, 27% 62%);
+}
+
+.dropdown-menu li:hover .sub-menu {
+  visibility: visible;
+}
+a{
+  color:white;
+}
+.form-inline{
+  margin-left: 400px;
+  padding-right:200px;
+}
+.dropdown-menu{
+  width:800px;
+  background-color:rgb(106, 104, 104)
+
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
+  margin-top: 0;
+}
+
+.navbar{
+  height:85px;
+}
+.navbar .sub-menu:before {
+  border-bottom: 7px solid transparent;
+  border-left: none;
+  border-right: 7px solid rgba(0, 0, 0, 0.2);
+  border-top: 7px solid transparent;
+  left: -7px;
+  top: 10px;
+}
+.navbar .sub-menu:after {
+  border-top: 6px solid transparent;
+  border-left: none;
+  border-right: 6px solid #fff;
+  border-bottom: 6px solid transparent;
+  left: 10px;
+  top: 11px;
+  left: -6px;
+  
+}
+
+.list-group{
+  margin-top: 80px;
+}
+
 .list-group-item {
   line-height: 2.5;
 }
@@ -19,6 +100,35 @@ h3 {
 
 .jumbotron {
   background-color: rgba(53, 49, 79, 0.748);
+  height:330px;
+  background-image: url("https://www.marinsoftware.com/wp-content/themes/marin/images/page/page-heroes/bidding_paddles_2015.jpg");
+  position:relative;
+  background-repeat: no-repeat;
+  background-image: 100%;
+  background-size: cover;
+  
+}
+
+.postbtn{
+  background-color: rgba(53, 49, 79, 0.748);
+  height:240px;
+  width:295px;
+  margin-top: 1px;
+  margin-left:-5px;
+  clip-path: polygon(49% 13%, 100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
+
+}
+
+.btn-success {
+  margin-top:1px;
+  margin-left:75px;
+}
+
+p{
+  font-size: 18px;
+  margin-top:-10px;
+  margin-left:18px;
+  color:white;
 }
 
 #login-btn {
@@ -36,15 +146,17 @@ h3 {
 }
 
 .lead {
+  font-size: 25px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(243,213,213);
+  margin-right:1px;
 }
 
 p {
   color: rgb(243,213,213);
 }
 body {
-  background-image: url("http://sfwallpaper.com/images/hd-abstract-wallpaper-widescreen-17.jpg");
+  background-image: url("https://wallpaper-gallery.net/images/technology-wallpapers/technology-wallpapers-3.jpg");
 }
 
 
