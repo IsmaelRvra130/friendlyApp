@@ -43,15 +43,15 @@ module.exports = function(app) {
   
   //Gets item from inventory by product name.
 
-  // app.get("/api/inventory/:product_name", function(req, res){
-  //   db.Inventory.findAll({
-  //     where: {
-  //       product_name: req.params.product_name
-  //     }
-  //   }).then(function(dbInventory){
-  //     res.json(dbInventory);
-  //   });
-  // })
+  app.get("/api/inventory/:product_name", function(req, res){
+    db.Inventory.findAll({
+      where: {
+        product_name: req.params.product_name
+      }
+    }).then(function(dbInventory){
+      res.json(dbInventory);
+    });
+  })
 
   // Create a new user through login **Not yet working**
   app.post("/api/users", function(req, res) {
